@@ -1,0 +1,5 @@
+{
+  "name": "codex-skill",
+  "description": "Delegate tasks to the Codex CLI for code analysis, refactoring, editing, review, and cloud tasks. Safer, smarter, and more capable than alternatives.",
+  "version": "1.0.0"
+}
