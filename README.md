@@ -92,25 +92,3 @@ codex-skill/
 └── README.md
 ```
 
-## Comparison with skill-codex
-
-| Capability | [skill-codex](https://github.com/skills-directory/skill-codex) | codex-skill (this) |
-|---|---|---|
-| Model selection | Hardcoded 3 models, asks every time | User's config default, zero questions |
-| Reasoning effort | Asks every time | User's config default, override on request |
-| `--skip-git-repo-check` | Always on | Only when needed + user confirms |
-| Stderr handling | `2>/dev/null` hides ALL errors | Suppresses thinking tokens; reruns on failure to show real errors |
-| Resume | Pipe-only (`echo \| codex exec resume`) | Heredoc for multiline safety |
-| Structured output | Not supported | `--json`, `--output-schema`, `-o` |
-| Code review | Not supported | Full review workflow |
-| Cloud tasks | Not supported | Full cloud workflow |
-| Image attachment | Not supported | `-i <path>` |
-| Additional directories | Not supported | `--add-dir <path>` |
-| Profiles | Not supported | `-p <profile>` |
-| Ephemeral mode | Not supported | `--ephemeral` |
-| Permission model | Ad-hoc asks | Three-tier escalation |
-| Dynamic context | Not used | `!`codex --version`` via `!` syntax |
-| Architecture | Monolithic SKILL.md | Progressive disclosure with references/ |
-| `--yolo` safety | Asks permission | Actively discourages, recommends safer alternative |
-| Model future-proofing | Hardcoded names go stale | Relies on user config |
-
