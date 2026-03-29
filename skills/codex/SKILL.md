@@ -1,14 +1,9 @@
 ---
 name: codex
 description: >-
-  Delegate tasks to the Codex CLI for code analysis, refactoring, automated editing,
-  code review, and cloud tasks. This skill should be used when the user asks to
-  "run codex", "ask codex", "delegate to codex", "codex review", "codex cloud",
-  "resume codex session", "continue codex", or references OpenAI Codex for any code task.
-  Also use when the user wants a second opinion from another AI model, wants to
-  "use GPT", "use OpenAI", "try a different model", or compare Claude's approach with
-  Codex's approach. Use this skill even if the user just says "let codex handle it",
-  "what would codex do", or asks to delegate any coding task to an external AI.
+  Delegate tasks to Codex CLI. Use when user says "run codex", "ask codex", "codex review",
+  "codex cloud", "let codex handle it", wants a second opinion from another AI, or asks to
+  use GPT/OpenAI for a code task.
 allowed-tools: Bash(codex:*)
 ---
 

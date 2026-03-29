@@ -1,6 +1,6 @@
 ---
 name: codex-info
-description: Show Codex CLI version and login status. This skill should be used when the user asks to "check codex", "is codex installed", "codex status", "codex version", or wants to verify Codex CLI readiness before running tasks. Also use when the user asks about tool setup, available AI tools, environment readiness, or says "check my tools".
+description: Show Codex CLI version and login status. Use when user wants to check if Codex is installed or ready.
 allowed-tools: Bash(codex:*)
 ---
 
