@@ -10,6 +10,8 @@ A Claude Code plugin that delegates tasks to OpenAI's [Codex CLI](https://develo
 - **Session resume** — continue Codex sessions with heredoc-safe multiline prompts
 - **Structured output** — `--json`, `--output-schema`, `-o` support
 - **Code review** — review uncommitted changes, branches, or commits
+- **Adversarial review** — skeptical review that challenges design decisions and finds dangerous failure modes
+- **Rescue / task delegation** — delegate debugging and implementation to Codex when stuck
 - **Cloud tasks** — submit and manage cloud-based Codex workloads
 - **Critical evaluation** — treats Codex as a peer, not an authority
 
@@ -63,6 +65,15 @@ Ask codex to analyze the authentication module
 | "resume codex" | Continues the previous session with context |
 | "what would codex do differently?" | Delegates to Codex, then compares approaches |
 
+### Dedicated Skills
+
+| Skill | Command | Purpose |
+|-------|---------|---------|
+| **Code Review** | `/codex-review` | One-command code review — uncommitted changes, branch diffs, or commits |
+| **Adversarial Review** | `/codex-adversarial-review` | Skeptical review challenging design decisions and failure modes |
+| **Rescue** | `/codex-rescue` | Delegate debugging, investigation, or implementation to Codex |
+| **Status Check** | `/codex-info` | Check Codex CLI installation and login status |
+
 ## Permission Model
 
 | Tier | Access Level | Confirmation |
@@ -81,11 +92,20 @@ codex-skill/
 │   └── plugin.json
 ├── skills/
 │   ├── codex/
-│   │   ├── SKILL.md                 # Core skill (185 lines)
+│   │   ├── SKILL.md                 # Core skill — general task delegation
 │   │   └── references/
 │   │       ├── flags-reference.md   # Complete CLI flag docs
 │   │       ├── review-mode.md       # Code review workflows
 │   │       └── cloud-tasks.md       # Cloud task management
+│   ├── codex-review/
+│   │   └── SKILL.md                 # Dedicated code review skill
+│   ├── codex-adversarial-review/
+│   │   ├── SKILL.md                 # Adversarial review skill
+│   │   └── references/
+│   │       ├── adversarial-prompt.md       # Adversarial prompt template
+│   │       └── review-output.schema.json   # JSON Schema for structured output
+│   ├── codex-rescue/
+│   │   └── SKILL.md                 # Rescue / task delegation skill
 │   └── codex-info/
 │       └── SKILL.md                 # Quick status check
 ├── LICENSE
