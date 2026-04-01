@@ -1,6 +1,6 @@
 ---
 name: codex-info
-description: Show Codex CLI version and login status. Use when user wants to check if Codex is installed or ready.
+description: When the user wants to check if Codex CLI is installed, logged in, or ready.
 allowed-tools: Bash(codex:*)
 ---
 
