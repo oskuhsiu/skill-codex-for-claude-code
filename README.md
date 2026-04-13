@@ -60,7 +60,7 @@ Ask codex to analyze the authentication module
 | Task | What happens |
 |------|-------------|
 | "ask codex to review this code" | Runs `codex exec --sandbox read-only` (Tier 1, no confirmation) |
-| "let codex refactor the auth module" | Runs `--sandbox workspace-write --full-auto` (Tier 2, informs you) |
+| "let codex refactor the auth module" | Runs `--full-auto` (Tier 2, informs you) |
 | "codex needs network access for this" | Asks for explicit confirmation before `--sandbox danger-full-access` (Tier 3) |
 | "resume codex" | Continues the previous session with context |
 | "what would codex do differently?" | Delegates to Codex, then compares approaches |
@@ -79,7 +79,7 @@ Ask codex to analyze the authentication module
 | Tier | Access Level | Confirmation |
 |------|-------------|-------------|
 | Safe | `--sandbox read-only` | None needed |
-| Standard | `--sandbox workspace-write --full-auto` | Informed, proceed unless objected |
+| Standard | `--full-auto` | Informed, proceed unless objected |
 | Dangerous | `--sandbox danger-full-access` | Explicit "yes" required |
 
 `--dangerously-bypass-approvals-and-sandbox` is actively discouraged. Even when requested, the skill recommends `--sandbox danger-full-access` as a safer alternative.

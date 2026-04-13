@@ -35,7 +35,7 @@ git remote show origin 2>/dev/null | grep 'HEAD branch' | awk '{print $NF}'
 Pass optional focus as a heredoc prompt:
 
 ```bash
-codex review --uncommitted <<'PROMPT' 2>/dev/null
+codex review --uncommitted - <<'PROMPT' 2>/dev/null
 Focus on security: injection vulnerabilities, auth issues, data exposure.
 PROMPT
 ```

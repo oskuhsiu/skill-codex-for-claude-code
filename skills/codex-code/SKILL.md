@@ -22,7 +22,7 @@ If not installed: `npm install -g @openai/codex && codex login`.
 ## Pre-flight
 
 Run the worktree check from `common.md`. Default sandbox is Tier 2
-(`workspace-write --full-auto`) since writing code always requires file writes.
+(`--full-auto`) since writing code always requires file writes.
 
 ## Build the coding prompt
 
@@ -40,7 +40,7 @@ ls package.json Cargo.toml go.mod requirements.txt Gemfile build.gradle pom.xml 
 ### Step 2: Construct the prompt
 
 ```bash
-codex exec --sandbox workspace-write --full-auto <<'PROMPT' 2>/tmp/codex_code_stderr.log
+codex exec --full-auto <<'PROMPT' 2>/tmp/codex_code_stderr.log
 Task: <user's request>
 
 Coding guidelines:

@@ -109,12 +109,12 @@ Manage feature flags with `codex features list`, `codex features enable <feature
 
 **Simple follow-up:**
 ```bash
-echo "add error handling to the function" | codex exec resume --last 2>/dev/null
+echo "add error handling to the function" | codex exec resume --last - 2>/dev/null
 ```
 
 **Multiline follow-up (heredoc for safety):**
 ```bash
-codex exec resume --last <<'PROMPT' 2>/dev/null
+codex exec resume --last - <<'PROMPT' 2>/dev/null
 Please also:
 1. Add input validation
 2. Write unit tests

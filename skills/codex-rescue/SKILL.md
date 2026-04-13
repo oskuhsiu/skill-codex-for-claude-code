@@ -21,7 +21,7 @@ If not installed: `npm install -g @openai/codex && codex login`.
 ## Choose sandbox level
 
 - "investigate", "analyze", "explain", "find out why" → `read-only` (Tier 1)
-- "fix", "refactor", "implement", "handle" → `workspace-write --full-auto` (Tier 2)
+- "fix", "refactor", "implement", "handle" → `--full-auto` (Tier 2)
 - Unclear → default to `read-only`, escalate if needed
 
 For write-mode: run the pre-flight worktree check from `common.md`.

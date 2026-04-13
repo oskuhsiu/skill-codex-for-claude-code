@@ -14,7 +14,7 @@ If not installed: `npm install -g @openai/codex && codex login`.
 | Tier | Sandbox | Rule |
 |------|---------|------|
 | 1 — Safe | `--sandbox read-only` | Proceed without asking |
-| 2 — Standard | `--sandbox workspace-write --full-auto` | Inform user, proceed unless objected |
+| 2 — Standard | `--full-auto` | Inform user, proceed unless objected |
 | 3 — Dangerous | `--sandbox danger-full-access` | Require explicit "yes" before proceeding |
 
 Never use `--dangerously-bypass-approvals-and-sandbox`. Recommend `danger-full-access` instead. Only use `--yolo` if the user insists after understanding the risk.
@@ -69,7 +69,7 @@ After every run: "The Codex session can be resumed."
 
 Resume:
 ```bash
-codex exec resume --last <<'PROMPT' 2>/dev/null
+codex exec resume --last - <<'PROMPT' 2>/dev/null
 <follow-up>
 PROMPT
 ```

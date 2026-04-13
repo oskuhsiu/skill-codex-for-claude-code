@@ -25,7 +25,7 @@ If not installed: `npm install -g @openai/codex && codex login`.
 | Task type | Sandbox |
 |-----------|---------|
 | Analysis, reading code | `read-only` (default) |
-| Edits, refactoring, file creation | `workspace-write --full-auto` |
+| Edits, refactoring, file creation | `--full-auto` |
 | Network access, system-wide changes | `danger-full-access` |
 
 Default to `read-only`. Escalate only when the task clearly requires writes.
@@ -41,7 +41,7 @@ codex exec --sandbox read-only "analyze the authentication flow" 2>/dev/null
 ```
 
 ```bash
-codex exec --sandbox workspace-write --full-auto "refactor the login module" 2>/dev/null
+codex exec --full-auto "refactor the login module" 2>/dev/null
 ```
 
 Run in cwd by default. Use `-C <dir>` only when user specifies a different directory.

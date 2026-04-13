@@ -1,6 +1,9 @@
 ---
 name: codex-info
-description: When the user wants to check if Codex CLI is installed, logged in, or ready.
+description: >-
+  When the user asks about Codex CLI status, version, login state, or troubleshoots
+  "codex not working / not found / auth error" — e.g., "codex 壞了", "codex 能用嗎",
+  "check codex", "codex version", "codex 登入了嗎", "codex login 過期".
 allowed-tools: Bash(codex:*)
 ---
 
